@@ -56,7 +56,7 @@ in the target by hand, the app picks that up.
 ### Any platform
 
 ```bash
-git clone https://github.com/<your-username>/copyIms.git
+git clone https://github.com/kobilevi2/copyIms.git
 cd copyIms
 npm install
 npm start

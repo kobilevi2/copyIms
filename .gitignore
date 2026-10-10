@@ -1,0 +1,16 @@
+node_modules/
+
+# Local per-user state -- never commit
+data/
+.claude/
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.log
+
+# Personal requirements doc -- kept locally, not published
+copyIms.md

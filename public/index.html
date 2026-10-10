@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>copyIms</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-row">
+      <label class="field">
+        <span>Origin root</span>
+        <div class="field-row">
+          <input type="text" id="originRoot" placeholder="e.g. C:\Users\me\Pictures\AllPhotos" />
+          <button type="button" id="browseOrigin" class="browse-btn">📂 Browse…</button>
+        </div>
+      </label>
+      <label class="field">
+        <span>Target root</span>
+        <div class="field-row">
+          <input type="text" id="targetRoot" placeholder="e.g. D:\Sorted\AllPhotos" />
+          <button type="button" id="browseTarget" class="browse-btn">📂 Browse…</button>
+        </div>
+      </label>
+      <label class="checkbox-field">
+        <input type="checkbox" id="continueFromLast" />
+        <span>Continue from last point</span>
+      </label>
+      <label class="checkbox-field">
+        <input type="checkbox" id="convertHeic" checked />
+        <span>Convert iPhone (HEIC/HEIF) photos to JPG when copying</span>
+      </label>
+      <button id="saveConfig">Save</button>
+    </div>
+    <div id="statusMessage" class="status-message" hidden></div>
+    <div id="warmStatus" class="warm-status" hidden></div>
+  </header>
+
+  <div class="folder-toolbar">
+    <nav id="breadcrumb" class="breadcrumb"></nav>
+    <label class="checkbox-field merge-toggle">
+      <input type="checkbox" id="mergeToggle" />
+      <span>Merge subdirectories</span>
+    </label>
+  </div>
+
+  <main id="grid" class="grid"></main>
+
+  <p id="emptyMessage" class="empty-message" hidden></p>
+
+  <div id="lightbox" class="lightbox" hidden>
+    <div class="lightbox-stage">
+      <span id="lightboxLoading" class="lightbox-loading">Loading…</span>
+      <img id="lightboxImg" alt="" />
+    </div>
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+    <div class="lightbox-hint">← → previous / next · Esc or click to close</div>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
